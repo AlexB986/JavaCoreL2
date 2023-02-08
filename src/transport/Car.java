@@ -1,12 +1,7 @@
 package transport;
 
-public class Car {
-    private final String brand;
-    private final String model;
+public class Car extends Transport{
     private double engineValue;
-    private String color;
-    private final int year;
-    private final String assemblyCountry;
     private String transmission;
     private final String bodyType;
     private String registrationNumber;
@@ -39,25 +34,11 @@ public class Car {
         }
     }
 
-    public Car(String brand, String model, Double engineValue, String color, int year, String assemblyCountry,
-               String transmission, String bodyType, String registrationNumber, int numberOfSeats, boolean tyres, Key key) {
-        if (brand == null || brand.isEmpty()) {
-            brand = brand = "default";
-        }
-        this.brand = brand;
-
-        if (model == null || model.isEmpty()) {
-            model = model = "default";
-        }
-        this.model = model;
+    public Car(String brand, String model, String color, int maxSpeed, String assemblyCountry, int year,Double engineValue,
+               String transmission, String bodyType, String registrationNumber, int numberOfSeats, boolean tyres) {
+        super(brand, model, color, maxSpeed, assemblyCountry, year);
         setEngineValue(engineValue);
         this.engineValue = engineValue;
-        setColor(color);
-        this.year = (year <= 0) ? 2000 : year;
-        if (assemblyCountry == null || assemblyCountry.isEmpty()) {
-            assemblyCountry = assemblyCountry = "Неизвестна";
-        }
-        this.assemblyCountry = assemblyCountry;
         setTransmission(transmission);
         this.bodyType = (bodyType == "" || bodyType == null) ? "Неизвестна" : bodyType;
 
@@ -67,14 +48,6 @@ public class Car {
         setKey(key);
     }
 
-    public String getBrand() {
-        return this.brand;
-    }
-
-    public String getModel() {
-
-        return this.model;
-    }
 
     public Double getEngineValue() {
         return this.engineValue;
@@ -87,24 +60,6 @@ public class Car {
         this.engineValue = engineValue;
     }
 
-    public String getColor() {
-        return this.color;
-    }
-
-    public void setColor(String color) {
-        if (color == null || color.isEmpty()) {
-            color = "white";
-        }
-        this.color = color;
-    }
-
-    public int getYear() {
-        return this.year;
-    }
-
-    public String getAssemblyCountry() {
-        return this.assemblyCountry;
-    }
 
     public String getTransmission() {
         return this.transmission;
@@ -166,12 +121,7 @@ public class Car {
     @Override
     public String toString() {
         return "Car{" +
-                "brand='" + brand + '\'' +
-                ", model='" + model + '\'' +
                 ", engineValue=" + engineValue +
-                ", color='" + color + '\'' +
-                ", year=" + year +
-                ", assemblyCountry='" + assemblyCountry + '\'' +
                 ", transmission='" + transmission + '\'' +
                 ", bodyType='" + bodyType + '\'' +
                 ", registrationNumber=" + registrationNumber +
