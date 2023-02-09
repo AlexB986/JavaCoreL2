@@ -120,7 +120,8 @@ public class Car extends Transport{
 
     @Override
     public String toString() {
-        return "Car{" +
+        return super.toString()+","+
+                "Car{" +
                 ", engineValue=" + engineValue +
                 ", transmission='" + transmission + '\'' +
                 ", bodyType='" + bodyType + '\'' +
