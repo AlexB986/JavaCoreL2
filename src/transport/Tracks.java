@@ -19,7 +19,7 @@ public class Tracks extends Transport <Category_driverC> {
 
     @Override
     public void maxSpeed() {
-        System.out.println("Максимальная скорость 285");
+        System.out.println("Максимальная скорость 255");
     }
 
     @Override

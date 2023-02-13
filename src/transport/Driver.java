@@ -45,7 +45,7 @@ public class Driver{
 
 
     public void stop() {
-        System.out.println("Остановлся");
+        System.out.println("Остановл");
     }
 
 

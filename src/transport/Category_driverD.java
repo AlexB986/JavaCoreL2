@@ -11,7 +11,7 @@ public class Category_driverD extends Driver{
 
     @Override
     public void stop() {
-        System.out.println("Остановлся водитель "+getFullName());
+        System.out.println("Остановл водитель "+getFullName());
     }
 
     @Override

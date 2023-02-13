@@ -20,7 +20,7 @@ public class Cars extends Transport <Category_driverB> {
 
     @Override
     public void maxSpeed() {
-        System.out.println("Максимальная скорость 200");
+        System.out.println("Максимальная скорость 210");
 
     }
 

@@ -60,7 +60,7 @@ public abstract class Transport<T extends  Driver> implements Competing{
     @Override
     public String toString() {
         return "Transport{" +
-                "brend='" + brend + '\'' +
+                "brend ='" + brend + '\'' +
                 ", model='" + model + '\'' +
                 ", engineValue=" + engineValue +
                 '}';

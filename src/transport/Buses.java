@@ -20,7 +20,7 @@ public class Buses extends Transport <Category_driverD> {
 
     @Override
     public void maxSpeed() {
-        System.out.println("Максимальная скорость 160");
+        System.out.println("Максимальная скорость 150");
 
     }
 
