@@ -1,73 +1,20 @@
 package transport;
 
-public class Tracks<T extends Category_driverC> extends Transport implements Competing {
+public class Tracks extends Transport <Category_driverC> {
 
-    private String brend;
-    private String model;
-    private double engineValue;
-    private T  categoryDriverC;
-
-
-    public Tracks(String brend, String model, double engineValue,T categoryDriverC) {
-        this.brend = brend;
-        this.model = model;
-        this.engineValue = engineValue;
-        this.categoryDriverC=categoryDriverC;
-
-    }
-
-    public String getBrend() {
-        return this.brend;
-    }
-
-    public void setBrend(String brend) {
-        if (brend == null || brend.isEmpty()) {
-            brend = "default";
-        }
-        this.brend = brend;
-    }
-
-    public String getModel() {
-        return this.model;
-    }
-
-    public void setModel(String model) {
-        if (model == null || model.isEmpty()) {
-            model = "default";
-        }
-        this.model = model;
-    }
-
-    public double getEngineValue() {
-        return this.engineValue;
-    }
-
-    public void setEngineValue(double engineValue) {
-        if (engineValue <= 0) {
-            engineValue = 1.5;
-        }
-        this.engineValue = engineValue;
-    }
-
-
-    @Override
-    public String toString() {
-        return "Tracks{" +
-                ", brend='" + brend + '\'' +
-                ", model='" + model + '\'' +
-                ", engineValue=" + engineValue +
-                '}';
+    public Tracks(String brend, String model, double engineValue, Category_driverC driver) {
+        super(brend, model, engineValue, driver);
     }
 
     @Override
     public void pit_stop() {
-        System.out.println("PIT-STOP "+brend);
+        System.out.println("PIT-STOP "+getBrend());
 
     }
 
     @Override
     public void bestLapTime() {
-        System.out.println("Лучший круг "+brend);
+        System.out.println("Лучший круг "+getBrend());
     }
 
     @Override
@@ -77,13 +24,13 @@ public class Tracks<T extends Category_driverC> extends Transport implements Com
 
     @Override
     public void start() {
-        System.out.println("Начал движение "+brend);
+        System.out.println("Начал движение "+getBrend());
 
     }
 
     @Override
     public void stop() {
-        System.out.println("Остановилься "+brend);
+        System.out.println("Остановилься "+getBrend());
 
     }
 }

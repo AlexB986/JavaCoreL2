@@ -39,8 +39,13 @@ public class CarBook {
         car2.bestLapTime();
         track2.maxSpeed();
         car2.pit_stop();
+        allRacer(car1);
+        allRacer(bus1);
+        allRacer(track1);
 
-        System.out.println("водитель "+ driverCar1.getFullName()+ " управляет автомобилем "+car1.getBrend()+ " "+ car1.getModel()+" и будет участвовать в заезде");
+    }
+    public static void  allRacer(Transport<?> transport){
+        System.out.println("водитель "+ transport.getDriver().getFullName()+ " управляет автомобилем "+transport.getBrend()+ " "+ transport.getModel()+" и будет участвовать в заезде");
 
     }
 }

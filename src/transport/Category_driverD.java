@@ -1,26 +1,21 @@
 package transport;
 
 public class Category_driverD extends Driver{
-    private  String license="D";
-
     public Category_driverD(String fullName, boolean drivingLicense, int experience) {
         super(fullName, drivingLicense, experience);
-        this.license="D";
     }
-
+    @Override
     public void start() {
-        System.out.println("Начал движение");
+        System.out.println("Начал движение  водитель "+getFullName());
     }
 
-
+    @Override
     public void stop() {
-        System.out.println("Остановлся");
+        System.out.println("Остановлся водитель "+getFullName());
     }
 
-
+    @Override
     public void refuel() {
-        System.out.println("Заправляюсь");
+        System.out.println("Заправляюсь "+getFullName());
     }
-
-
 }
