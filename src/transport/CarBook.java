@@ -3,7 +3,7 @@ package transport;
 //        https://github.com/AlexB986/JavaCoreL2/pull/3
 public class CarBook {
     public static void main(String[] args) {
-        Category_driverB driverCar1 = new Category_driverB("Толстов.И.Б", true, 5);
+        Category_driverB driverCar1 = new Category_driverB("Толстов.И.Б", true, 7);
         Category_driverB driverCar2 = new Category_driverB("Прохоров.А.С", true, 19);
         Category_driverB driverCar3 = new Category_driverB("Окунев.С.Ю", true, 40);
         Category_driverB driverCar4 = new Category_driverB("Ветров.И.Е", true, 1);
