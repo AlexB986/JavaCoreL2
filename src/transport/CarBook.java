@@ -2,7 +2,7 @@ package transport;
 
 public class CarBook {
     public static void main(String[] args) {
-        Driver driverBus1 = new Driver("Шумахер.Т.Р", true, 20);
+        Driver driverBus1 = new Driver("Шумахер.Т.Р", true, 21);
         Driver driverBus2 = new Driver("Костин.И.В", true, 25);
         Driver driverBus3 = new Driver("Рашидов.М.В", true, 15);
         Driver driverBus4 = new Driver("Бобров.Г.Ю", true, 10);
