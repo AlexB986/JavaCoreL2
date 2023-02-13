@@ -1,16 +1,46 @@
 package transport;
 
+//        https://github.com/AlexB986/JavaCoreL2/pull/3
 public class CarBook {
-    public static void main(String[] args){
+    public static void main(String[] args) {
+        Category_driverB driverCar1 = new Category_driverB("Толстов.И.Б", true, 5);
+        Category_driverB driverCar2 = new Category_driverB("Прохоров.А.С", true, 19);
+        Category_driverB driverCar3 = new Category_driverB("Окунев.С.Ю", true, 40);
+        Category_driverB driverCar4 = new Category_driverB("Ветров.И.Е", true, 1);
 
-        Car auto3 = new Car("BMW", "x1","black" ,150, "usa", 2000,2.2d,"Atm","sedan", "q111qq111",4,true) ;
+        Category_driverC driverTracks1 = new Category_driverC("Бабков.А.М", true, 26);
+        Category_driverC driverTracks2 = new Category_driverC("Тютчев.А.П", true, 14);
+        Category_driverC driverTracks3 = new Category_driverC("Ткачев.Е.В", true, 30);
+        Category_driverC driverTracks4 = new Category_driverC("Романов.С.Г", true, 12);
 
-        Bus auto = new Bus("gaz", "a1","blie", 150,"usa",1000);
-        Car auto1=new Car( "taz","a2","red",600,"chi",1990,1.6d,"Atm","sedan","q111qq123",4,true);
-        Transport auto2 = new Transport("vaz", "a3","white", 170,"usa",2010);
-        System.out.println(auto3);
-        System.out.println(auto.toString());
-        System.out.println(auto1.toString());
-        System.out.println(auto2.toString());
+        Category_driverD driverBus1 = new Category_driverD("Шумахер.Т.Р", true, 21);
+        Category_driverD driverBus2 = new Category_driverD("Костин.И.В", true, 25);
+        Category_driverD driverBus3 = new Category_driverD("Рашидов.М.В", true, 15);
+        Category_driverD driverBus4 = new Category_driverD("Бобров.Г.Ю", true, 10);
+
+
+        Cars car1 = new Cars("Lada", "B1", 2.5, driverCar1);
+        Cars car2 = new Cars("Ford", "B2", 1.5, driverCar2);
+        Cars car3 = new Cars("VW", "B3", 2.0, driverCar3);
+        Cars car4 = new Cars("ЗАЗ", "B4", 1.3, driverCar4);
+
+        Tracks track1 = new Tracks("Kamaz", "С1", 5.0, driverTracks1);
+        Tracks track2 = new Tracks("Volvo", "С2", 4.5, driverTracks2);
+        Tracks track3 = new Tracks("МАЗ", "С3", 7.1, driverTracks3);
+        Tracks track4 = new Tracks("ЗИЛ", "С4", 6.2, driverTracks4);
+
+        Buses bus1 = new Buses("Паз", "А1", 2.0, driverBus1);
+        Buses bus2 = new Buses("Газ", "А2", 3.1, driverBus2);
+        Buses bus3 = new Buses("Raf", "А3", 1.9, driverBus3);
+        Buses bus4 = new Buses("Fiat", "А4", 2.5, driverBus4);
+
+
+        car1.pit_stop();
+        car2.bestLapTime();
+        track2.maxSpeed();
+        car2.pit_stop();
+
+        System.out.println("водитель "+ driverCar1.getFullName()+ " управляет автомобилем "+car1.getBrend()+ " "+ car1.getModel()+" и будет участвовать в заезде");
+
     }
 }
