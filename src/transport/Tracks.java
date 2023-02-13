@@ -1,6 +1,6 @@
 package transport;
 
-public class Tracks<T> extends Transport implements Competing {
+public class Tracks<T extends Category_driverC> extends Transport implements Competing {
 
     private String brend;
     private String model;
@@ -61,29 +61,29 @@ public class Tracks<T> extends Transport implements Competing {
 
     @Override
     public void pit_stop() {
-        System.out.println("PIT-STOP ");
+        System.out.println("PIT-STOP "+brend);
 
     }
 
     @Override
     public void bestLapTime() {
-        System.out.println("Лучший круг ");
+        System.out.println("Лучший круг "+brend);
     }
 
     @Override
     public void maxSpeed() {
-        System.out.println("Максимальная скорость ");
+        System.out.println("Максимальная скорость 285");
     }
 
     @Override
     public void start() {
-        System.out.println("Начал движение");
+        System.out.println("Начал движение "+brend);
 
     }
 
     @Override
     public void stop() {
-        System.out.println("Остановилься");
+        System.out.println("Остановилься "+brend);
 
     }
 }

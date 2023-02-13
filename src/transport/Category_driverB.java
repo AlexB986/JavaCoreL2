@@ -1,8 +1,12 @@
 package transport;
 
-public class Category_driverB {
+public class Category_driverB  extends Driver{
 
+    private static String license="B";
 
+    public Category_driverB(String fullName, boolean drivingLicense, int experience) {
+        super(fullName, drivingLicense, experience);
+    }
 
     public void start() {
         System.out.println("Начал движение");
